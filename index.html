@@ -6,18 +6,23 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+<<<<<<< HEAD
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+=======
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+>>>>>>> a76472fe4d18d31171eff68efc34e55e7ff8ce34
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				giant dumb header
+		<div class="row header">
+			<div class="col-md-12 text-center header">
+				<h1>Employee Data Management</h1>
+				<h3>A comprehensive Directory of Employee Billable Hours</h3>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row main">
 			<div class="col-md-12">
-				<table>
+				<table id="employees" class="table">
 					<tr>
 						<td>
 							Dumb table
@@ -43,11 +48,15 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<input type="text" name="name">
-				<input type="text" name="position">
-				<input type="text" name="monthly">
-				<input type="text" name="startDate">
-				<input type="submit" name="submit">
+				<textarea id="name" class="inputs" placeholder="Enter your name..."></textarea>
+				<br>
+				<textarea id="role" class="inputs" placeholder="Enter your position..."></textarea>
+				<br>
+				<textarea id="rate" class="inputs" placeholder="Enter your salary..."></textarea>
+				<br>
+				<textarea id="start" class="inputs" placeholder="Enter your starting date..."></textarea>
+				<br>
+				<button>Submit</button>
 			</div>
 		</div>
 	</div>
