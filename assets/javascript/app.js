@@ -8,6 +8,7 @@
   };
   firebase.initializeApp(config);
 
+
 // Variable to reference the database
     var database = firebase.database();
 
@@ -24,3 +25,6 @@
       event.preventDefault();
 
   // Input form
+
+  
+
