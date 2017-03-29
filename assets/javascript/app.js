@@ -16,14 +16,29 @@ var database = firebase.database();
 // Employee details as variables to reference the database
 var name = "";
 var role = "";
-var start = "";
 var rate = "";
+var start = "";
+// All of our employees will be stored in this directory.
+var connectionsRef = database.ref("/employees");
 
 
+//This takes the form input and adds to the database
 // Capture Button Click
-$("#add-user").on("click", function() {
-  // Don't refresh the page!
-  event.preventDefault();
+$("#?add-user?").on("click", function() {
+    // Don't refresh the page!
+    event.preventDefault();
 
-  // Input form
-}
+    // Get inputs
+    name = $("#name-input").val().trim();
+    role = $("#role-input").val().trim();
+    rate = $("#rate-input").val().trim();
+    start = $("#start-input").val().trim();
+
+    // Change what is saved in firebase
+    connectionsRef.push({
+        name: name,
+        role: role,
+        rate: rate,
+        start: start,
+    });
+});
