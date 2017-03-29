@@ -29,6 +29,12 @@ connectionsRef.on("child_added", function(snapshot){
   var elemDateAdded = snapshot.val().dateAdded;
   //var elemBilled = ---snapshot.val().dateAdded---;
   console.log();
+  var tableRow = $("<tr class='tableBody'>");
+  tableRow.append($("<td class='empName'>").text(elemName));
+  tableRow.append($("<td class='empRole'>").text(elemRole));
+  tableRow.append($("<td class='monthlyRate'>").text(elemRate));
+  tableRow.append($("<td class='empStart'>").text(elemStart));
+  tableRow.append($("<td class='totalBilled'>").text(elemBilled));
 });
 
 
@@ -52,14 +58,4 @@ $("#enter-data").on("click", function() {
         start: start,
         dataAdded: firebase.database.ServerValue.TIMESTAMP
     });
-});
-dataRef.ref().on("child_added", function(childsnapshot)  {
-
-
-var tableRow = $("<tr class='tableBody'>");
-tableRow.append($("<td class='empName'>").text(elemName));
-tableRow.append($("<td class='empRole'>").text(elemRole));
-tableRow.append($("<td class='monthlyRate'>").text(elemRate));
-tableRow.append($("<td class='empStart'>").text(elemStart));
-tableRow.append($("<td class='totalBilled'>").text(elemBilled));
 });
