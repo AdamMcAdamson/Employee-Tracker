@@ -7,3 +7,20 @@
     messagingSenderId: "987085544007"
   };
   firebase.initializeApp(config);
+
+// Variable to reference the database
+    var database = firebase.database();
+
+    // Employee details as variables to reference the database
+   var name = "";
+    var role = "";
+    var start = "";
+    var rate = "";
+
+
+    // Capture Button Click
+    $("#add-user").on("click", function() {
+      // Don't refresh the page!
+      event.preventDefault();
+
+  // Input form
