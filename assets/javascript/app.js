@@ -27,13 +27,14 @@ connectionsRef.on("child_added", function(snapshot){
   var elemRate = snapshot.val().rate;
   var elemStart = snapshot.val().start;
   var elemDateAdded = snapshot.val().dateAdded;
+  //var elemBilled = ---snapshot.val().dateAdded---;
   console.log();
 });
 
 
 //This takes the form input and adds to the database
 // Capture Button Click
-$("#?add-user?").on("click", function() {
+$("#enter-data").on("click", function() {
     // Don't refresh the page!
     event.preventDefault();
 
@@ -49,6 +50,15 @@ $("#?add-user?").on("click", function() {
         role: role,
         rate: rate,
         start: start,
-        dateAdded: dateAdded
+        dataAdded: firebase.database.ServerValue.TIMESTAMP
     });
+});
+dataRef.ref().on("child_added", function(childsnapshot)  {
+
+
+name = $("<td class="empName">").text(elemName);
+role = $("<td class="empRole">").text(elemRole);
+rate = $("<td class="monthlyRate">").text(elemRate);
+start = $("<td class="empStart">").text(elemStart);
+start = $("<td class="totalBilled">").text(elemBilled);
 });
