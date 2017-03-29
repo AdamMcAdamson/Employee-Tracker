@@ -29,6 +29,7 @@ connectionsRef.on("child_added", function(snapshot){
   var elemDateAdded = snapshot.val().dateAdded;
   //var elemBilled = ---snapshot.val().dateAdded---;
   console.log();
+
   var tableRow = $("<tr class='tableBody'>");
   tableRow.append($("<td class='empName'>").text(elemName));
   tableRow.append($("<td class='empRole'>").text(elemRole));
@@ -58,4 +59,13 @@ $("#enter-data").on("click", function() {
         start: start,
         dataAdded: firebase.database.ServerValue.TIMESTAMP
     });
+<<<<<<< HEAD
 });
+=======
+});
+
+
+
+
+
+>>>>>>> 632572b3a3637d9e265fc504eb14f81ace9670f8
