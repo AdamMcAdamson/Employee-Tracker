@@ -21,10 +21,20 @@ var start = "";
 // All of our employees will be stored in this directory.
 var connectionsRef = database.ref("/employees");
 
+connectionsRef.on("child_added", function(snapshot){
+  var elemName = snapshot.val().name;
+  var elemRole = snapshot.val().role;
+  var elemRate = snapshot.val().rate;
+  var elemStart = snapshot.val().start;
+  var elemDateAdded = snapshot.val().dateAdded;
+  //var elemBilled = ---snapshot.val().dateAdded---;
+  console.log();
+});
+
 
 //This takes the form input and adds to the database
 // Capture Button Click
-$("#?add-user?").on("click", function() {
+$("#enter-data").on("click", function() {
     // Don't refresh the page!
     event.preventDefault();
 
@@ -33,12 +43,23 @@ $("#?add-user?").on("click", function() {
     role = $("#role-input").val().trim();
     rate = $("#rate-input").val().trim();
     start = $("#start-input").val().trim();
-
+    dateAdded = "Time";
     // Change what is saved in firebase
     connectionsRef.push({
         name: name,
         role: role,
         rate: rate,
         start: start,
+        dataAdded: firebase.database.ServerValue.TIMESTAMP
     });
+});
+dataRef.ref().on("child_added", function(childsnapshot)  {
+
+
+var tableRow = $("<tr class='tableBody'>");
+tableRow.append($("<td class='empName'>").text(elemName));
+tableRow.append($("<td class='empRole'>").text(elemRole));
+tableRow.append($("<td class='monthlyRate'>").text(elemRate));
+tableRow.append($("<td class='empStart'>").text(elemStart));
+tableRow.append($("<td class='totalBilled'>").text(elemBilled));
 });
