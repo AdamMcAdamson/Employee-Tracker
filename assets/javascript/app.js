@@ -27,16 +27,20 @@ connectionsRef.on("child_added", function(snapshot){
   var elemRate = snapshot.val().rate;
   var elemStart = snapshot.val().start;
   var elemDateAdded = snapshot.val().dateAdded;
-  //var elemBilled = ---snapshot.val().dateAdded---;
-  // var momentStart = moment(new Date(elemStart));
-  console.log();
+  var momentStart = moment(new Date(elemStart));
+
+  var monthsWorked = -1 * moment(momentStart).diff(moment(), "months");
+
+  var totalBilled = monthsWorked * elemRate;
 
   var tableRow = $("<tr class='tableBody'>");
   tableRow.append($("<td class='empName'>").text(elemName));
   tableRow.append($("<td class='empRole'>").text(elemRole));
   tableRow.append($("<td class='monthlyRate'>").text(elemRate));
+  tableRow.append($("<td class='empMonths'>").text(monthsWorked));
   tableRow.append($("<td class='empStart'>").text(elemStart));
-  // tableRow.append($("<td class='totalBilled'>").text(elemBilled));
+  tableRow.append($("<td class='empBilled'>").text(totalBilled));
+  $("#empList").append(tableRow);
 });
 
 
