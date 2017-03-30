@@ -28,6 +28,7 @@ connectionsRef.on("child_added", function(snapshot){
   var elemStart = snapshot.val().start;
   var elemDateAdded = snapshot.val().dateAdded;
   //var elemBilled = ---snapshot.val().dateAdded---;
+  var momentStart = moment(new Date(elemStart));
   console.log();
 
   var tableRow = $("<tr class='tableBody'>");
@@ -52,7 +53,7 @@ $("#enter-data").on("click", function() {
     start = $("#start-input").val().trim();
     dateAdded = "Time";
     // Change what is saved in firebase
-    connectionsRef.push({
+    database.ref().push({
         name: name,
         role: role,
         rate: rate,
