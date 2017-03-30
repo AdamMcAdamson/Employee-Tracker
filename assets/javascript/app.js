@@ -28,7 +28,7 @@ connectionsRef.on("child_added", function(snapshot){
   var elemStart = snapshot.val().start;
   var elemDateAdded = snapshot.val().dateAdded;
   //var elemBilled = ---snapshot.val().dateAdded---;
-  var momentStart = moment(new Date(elemStart));
+  // var momentStart = moment(new Date(elemStart));
   console.log();
 
   var tableRow = $("<tr class='tableBody'>");
@@ -42,7 +42,7 @@ connectionsRef.on("child_added", function(snapshot){
 
 //This takes the form input and adds to the database
 // Capture Button Click
-$("#enter-data").on("click", function() {
+$("#submit-button").on("click", function() {
     // Don't refresh the page!
     event.preventDefault();
 
@@ -53,7 +53,7 @@ $("#enter-data").on("click", function() {
     start = $("#start-input").val().trim();
     dateAdded = "Time";
     // Change what is saved in firebase
-    database.ref().push({
+    connectionsRef.push({
         name: name,
         role: role,
         rate: rate,
