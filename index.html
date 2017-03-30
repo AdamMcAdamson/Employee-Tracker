@@ -17,29 +17,29 @@
 				<h3>A comprehensive Directory of Employee Billable Hours</h3>
 			</div>
 		</div>
-		<div class="row main">
-			<div class="col-md-12">
-				<div class="row">
-				<table id="empList" class="table">
+	</div>
+	<div class="container">
+		<div class="row main table">
+				<table id="empList" class="tableContainer">
 					<tr class="tableHead">
-						<th class="empName">
+						<td class="empName">
 							Employee Name
-						</th>
-						<th class="empRole">
+						</td>
+						<td class="empRole">
 							Role
-						</th>
-						<th class="empStart">
+						</td>
+						<td class="empStart">
 							Start Date
-						</th>
-						<th class="monthsWorked">
+						</td>
+						<td class="monthsWorked">
 							Months Worked
-						</th>
-						<th class="monthlyRate">
+						</td>
+						<td class="monthlyRate">
 							Monthly Rate ($)
-						</th>
-						<th class="totalBilled">
+						</td>
+						<td class="totalBilled">
 							Total Billed ($)
-						</th>
+						</td>
 						</tr>
 <!-- 					<tr class="tableBody">
 						<td class="empName">
@@ -62,20 +62,21 @@
 						</td>
 					</tr> -->
 				</table>
-				</div>
-			</div>
 		</div>
+	</div>
+	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<textarea id="name-input" class="inputs" placeholder="Enter your name..."></textarea>
+			<div class="col-md-6 col-md-offset-3 inputArea">
+				<h2>Enter an employee</h2>
+				<textarea id="name-input" class="inputs" placeholder="Enter employee name..."></textarea>
 				<br>
-				<textarea id="role-input" class="inputs" placeholder="Enter your position..."></textarea>
+				<textarea id="role-input" class="inputs" placeholder="Enter employee position..."></textarea>
 				<br>
-				<textarea id="rate-input" class="inputs" placeholder="Enter your salary..."></textarea>
+				<textarea id="rate-input" class="inputs" placeholder="Enter employee salary..."></textarea>
 				<br>
-				<textarea id="start-input" class="inputs" placeholder="Enter your starting date..."></textarea>
+				<textarea id="start-input" class="inputs" placeholder="Enter employee starting date..."></textarea>
 				<br>
-				<button id="submit-button">Submit</button>
+				<button id="submit-button" class="button">Submit</button>
 			</div>
 		</div>
 	</div>

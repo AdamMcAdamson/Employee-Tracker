@@ -1,3 +1,7 @@
+table {
+	border-collapse: separate !important;
+}
+
 .main {
 }
 
@@ -11,6 +15,15 @@
 
 .inputs {
 	width: 100%;
+	border-radius: 5px;
+	height: 30px;
+	margin-top: 8px;
+}
+
+.button {
+	margin-top: 8px;
+	margin-bottom: 14px;
+	font-size: 1.2em;
 }
 
 .header {
@@ -31,7 +44,10 @@
 	width: 100%;
 	border: 1px solid blue;
 	border-radius: 5px;
-	border-collapse: collapse; 
+	border-top: 0px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 15px;
 }
 
 .tableHead {
@@ -39,9 +55,31 @@
 	color: white;
 }
 
-tr {
-	border:none 	;
+th {
+	border: none;
 }
+
+tr {
+	border:none;
+}
+
+.tableContainer {
+	width: 100%;
+}
+
+h2 {
+	font-size: 2em;
+	margin-top: 5px;
+}
+
+.inputArea {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+/*
+.empName {
+	margin-left: 10px;
+}*/
 
 /*.tableBody {
 	box-sizing: border-box;
