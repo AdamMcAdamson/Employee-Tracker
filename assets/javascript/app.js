@@ -36,9 +36,9 @@ connectionsRef.on("child_added", function(snapshot){
   var tableRow = $("<tr class='tableBody'>");
   tableRow.append($("<td class='empName'>").text(elemName));
   tableRow.append($("<td class='empRole'>").text(elemRole));
-  tableRow.append($("<td class='monthlyRate'>").text(elemRate));
-  tableRow.append($("<td class='empMonths'>").text(monthsWorked));
   tableRow.append($("<td class='empStart'>").text(elemStart));
+  tableRow.append($("<td class='empMonths'>").text(monthsWorked));
+  tableRow.append($("<td class='monthlyRate'>").text(elemRate));
   tableRow.append($("<td class='empBilled'>").text(totalBilled));
   $("#empList").append(tableRow);
 });
